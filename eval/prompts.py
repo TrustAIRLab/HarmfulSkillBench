@@ -1,5 +1,5 @@
 """
-HarmSkillBench Prompt Templates & Message Construction
+HarmfulSkillBench Prompt Templates & Message Construction
 
 References:
 - System prompt: AgentHarm (ICLR 2025), Table 4

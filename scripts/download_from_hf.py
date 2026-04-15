@@ -1,8 +1,8 @@
 """
-Download HarmSkillBench from HuggingFace into the local `data/` directory.
+Download HarmfulSkillBench from HuggingFace into the local `data/` directory.
 
 The HuggingFace dataset repo is gated. You need:
-  1. A HuggingFace account with access granted to TrustAIRLab/HarmSkillBench
+  1. A HuggingFace account with access granted to TrustAIRLab/HarmfulSkillBench
      (apply via the dataset page).
   2. An HF token stored in either:
        - the HF_TOKEN environment variable, or
@@ -29,13 +29,13 @@ import os
 import sys
 from pathlib import Path
 
-REPO_ID = "TrustAIRLab/HarmSkillBench"
+REPO_ID = "TrustAIRLab/HarmfulSkillBench"
 REPO_TYPE = "dataset"
 DEFAULT_LOCAL_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Download HarmSkillBench from HuggingFace.")
+    ap = argparse.ArgumentParser(description="Download HarmfulSkillBench from HuggingFace.")
     ap.add_argument(
         "--local-dir",
         default=str(DEFAULT_LOCAL_DIR),

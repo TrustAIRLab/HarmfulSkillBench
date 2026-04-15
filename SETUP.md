@@ -46,7 +46,7 @@ At minimum you need `HF_TOKEN` (to download data) plus `OPENAI_API_KEY`
 
 ## 3. HuggingFace access
 
-The dataset repo `TrustAIRLab/HarmSkillBench` is gated. Click "Request
+The dataset repo `TrustAIRLab/HarmfulSkillBench` is gated. Click "Request
 Access" on the dataset page and fill out the form. Once the request
 is approved, your HF token can download the dataset.
 

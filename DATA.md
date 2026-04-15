@@ -1,7 +1,7 @@
 # DATA
 
 The dataset is hosted at
-[TrustAIRLab/HarmSkillBench](https://huggingface.co/datasets/TrustAIRLab/HarmSkillBench)
+[TrustAIRLab/HarmfulSkillBench](https://huggingface.co/datasets/TrustAIRLab/HarmfulSkillBench)
 and is downloaded to `data/` by `scripts/download_from_hf.py`.
 
 ## Directory Layout

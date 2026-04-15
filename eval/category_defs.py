@@ -3,7 +3,7 @@ Category definitions used by run_eval.py / judge.py.
 
 Each entry maps a category code (A1..A14, AH1..AH7) to a tuple of
 (short_name, one-paragraph_definition). Definitions are taken verbatim
-from the HarmSkillBench taxonomy (derived from Anthropic's AUP).
+from the HarmfulSkillBench taxonomy (derived from Anthropic's AUP).
 
 Tier 1 Prohibited:   A1..A14   (A7 is excluded in the benchmark release)
 Tier 2 High-Risk:    AH1..AH7

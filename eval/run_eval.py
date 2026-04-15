@@ -1,5 +1,5 @@
 """
-HarmSkillBench Evaluation Runner
+HarmfulSkillBench Evaluation Runner
 
 Runs LLM evaluation across skills x conditions x models.
 Supports OpenAI-compatible API models and local HF Transformers models.
@@ -317,7 +317,7 @@ def call_model(client, config: dict, messages: list, tools=None) -> dict:
 # ---------------------------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="Run HarmSkillBench evaluation")
+    parser = argparse.ArgumentParser(description="Run HarmfulSkillBench evaluation")
     parser.add_argument(
         "--models", nargs="+",
         default=["gpt-4o", "gpt-5.4-mini", "gemini-3-flash",

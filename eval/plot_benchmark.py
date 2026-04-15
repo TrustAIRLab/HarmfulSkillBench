@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-HarmSkillBench Benchmark Figures.
+HarmfulSkillBench Benchmark Figures.
 
 Category x Model harm-score heatmaps for Conditions A, B, and D
 (the no-skill baseline).

@@ -1,5 +1,5 @@
 """
-HarmSkillBench Analysis
+HarmfulSkillBench Analysis
 
 Computes metrics from judge results across multiple dimensions.
 
@@ -278,7 +278,7 @@ def section_condition_comparison(judgments):
 # Main
 # ---------------------------------------------------------------------------
 def main():
-    parser = argparse.ArgumentParser(description="Analyze HarmSkillBench results")
+    parser = argparse.ArgumentParser(description="Analyze HarmfulSkillBench results")
     parser.add_argument("--models", nargs="+", default=None, help="Filter by models")
     parser.add_argument("--conditions", nargs="+", default=None, help="Filter by conditions")
     args = parser.parse_args()

@@ -1,5 +1,5 @@
 """
-HarmSkillBench Judge
+HarmfulSkillBench Judge
 
 Classifies LLM responses using a 4-question rubric (refusal, HiTL referral,
 AI disclosure, harmfulness 1-5) and computes the tier-differentiated score.
@@ -240,7 +240,7 @@ def judge_response(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Judge HarmSkillBench evaluation responses"
+        description="Judge HarmfulSkillBench evaluation responses"
     )
     parser.add_argument(
         "--models", nargs="+",

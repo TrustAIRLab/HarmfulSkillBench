@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="HarmSkillBench_Logo.png" alt="HarmSkillBench" width="600">
+  <img src="HarmfulSkillBench_Logo.png" alt="HarmfulSkillBench" width="600">
 </p>
 
-# HarmSkillBench
+# HarmfulSkillBench
 
 Benchmark code for evaluating LLM refusal behavior when agents are exposed
 to skills that describe potentially harmful capabilities.
@@ -14,7 +14,7 @@ responses should include human-in-the-loop referral and AI disclosure
 safeguards.
 
 - **Dataset (200 skills + tasks + aggregated results)**:
-  [TrustAIRLab/HarmSkillBench on HuggingFace](https://huggingface.co/datasets/TrustAIRLab/HarmSkillBench)
+  [TrustAIRLab/HarmfulSkillBench on HuggingFace](https://huggingface.co/datasets/TrustAIRLab/HarmfulSkillBench)
   (gated)
 - **Code (this repo)**: download script + evaluation runner + judge +
   analysis + figure plotting
@@ -170,9 +170,9 @@ MIT. See [LICENSE](LICENSE).
 
 ```bibtex
 @misc{JZBSZ26,
-  title = {{HarmSkillBench: How Do Skills Weaponize Your Agents?}},
+  title = {{HarmfulSkillBench: How Do Skills Weaponize Your Agents?}},
   author = {Yukun Jiang and Yage Zhang and Michael Backes and Xinyue Shen and Yang Zhang},
   year = {2026},
-  howpublished = {\url{https://huggingface.co/datasets/TrustAIRLab/HarmSkillBench}},
+  howpublished = {\url{https://huggingface.co/datasets/TrustAIRLab/HarmfulSkillBench}},
 }
 ```
