@@ -1,0 +1,23 @@
+# Local environment
+.env
+.env.local
+
+# Downloaded dataset (lives under data/ after running download_from_hf.py)
+data/skills/
+data/eval_tasks/
+data/eval_results/
+data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
