@@ -2,11 +2,14 @@
 .env
 .env.local
 
-# Downloaded dataset (lives under data/ after running download_from_hf.py)
-data/skills/
-data/eval_tasks/
-data/eval_results/
-data/
+# data/ is populated by `python scripts/download_from_hf.py`.
+# Only the aggregated judgments CSV is committed to the repo (it contains
+# no sensitive information and lets reviewers inspect the main results
+# without downloading the full dataset).
+/data/*
+!/data/eval_results
+/data/eval_results/*
+!/data/eval_results/judgments_aggregated.csv
 
 # Python
 __pycache__/
