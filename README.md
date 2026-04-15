@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="HarmfulSkillBench_Logo.png" alt="HarmfulSkillBench" width="600">
+  <img src="HarmfulSkillBench_Comics.png" alt="HarmfulSkillBench" width="600">
 </p>
 
 # HarmfulSkillBench
