@@ -1,11 +1,11 @@
 # EVALUATE
 
-End-to-end workflow for running the benchmark.
+Workflow for running the benchmark.
 
 ## 0. Prerequisites
 
-See [SETUP.md](SETUP.md) for the one-time environment setup. After setup
-`data/` should contain the downloaded dataset.
+See [SETUP.md](SETUP.md) for environment setup. After that, `data/`
+should contain the downloaded dataset.
 
 ## 1. Run model evaluation
 
@@ -21,7 +21,7 @@ python eval/run_eval.py
 python eval/run_eval.py --models gpt-4o --conditions A
 python eval/run_eval.py --conditions C1 C2 C3 C4      # Tier 2 safeguard ablation
 
-# Tiny smoke test.
+# One skill, one condition.
 python eval/run_eval.py --models gpt-4o --conditions A --limit 1
 
 # Filter by tier.

@@ -211,8 +211,8 @@ if __name__ == "__main__":
     judgments = [j for j in judgments if j["model"] in MODEL_ORDER]
     print(f"Filtered to {len(judgments)} (6 models).")
 
-    # Sanity checks: A, B, D each should have 1200 (200 * 6) judgments,
-    # per (model, cat) cell = 10.
+    # Row-count checks: A, B, D should each have 1200 (200 * 6) judgments,
+    # and each (model, category) cell should have 10.
     conds_seen = set(j["condition"] for j in judgments)
     for req in ("A", "B", "D"):
         if req not in conds_seen:
@@ -227,7 +227,7 @@ if __name__ == "__main__":
         uniq = set(cell_counts.values())
         if uniq != {10}:
             raise SystemExit(f"Condition {cond} per-cell counts = {uniq}, expected {{10}}.")
-    print("  Sanity checks passed.")
+    print("  row counts ok.")
 
     print("\nHeatmaps:")
     plot_heatmap(judgments, "A")

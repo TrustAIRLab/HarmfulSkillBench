@@ -3,7 +3,7 @@ Download HarmSkillBench from HuggingFace into the local `data/` directory.
 
 The HuggingFace dataset repo is gated. You need:
   1. A HuggingFace account with access granted to TrustAIRLab/HarmSkillBench
-     (apply via the dataset page; approval is automatic for researchers).
+     (apply via the dataset page).
   2. An HF token stored in either:
        - the HF_TOKEN environment variable, or
        - a .env file next to this script's repo root
@@ -95,7 +95,7 @@ def main() -> None:
     )
     print(f"[done]  downloaded to: {path}")
 
-    # Minimal post-download sanity check.
+    # Check expected paths exist.
     expected = [
         "skills",
         "eval_tasks/reviewed_tasks.jsonl",

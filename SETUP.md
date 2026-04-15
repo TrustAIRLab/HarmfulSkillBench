@@ -2,7 +2,7 @@
 
 ## 1. Python environment
 
-We recommend a dedicated conda environment.
+Create a dedicated conda environment.
 
 ```bash
 conda create -n harmskillbench python=3.11 -y
@@ -46,10 +46,9 @@ At minimum you need `HF_TOKEN` (to download data) plus `OPENAI_API_KEY`
 
 ## 3. HuggingFace access
 
-The dataset repo `TrustAIRLab/HarmSkillBench` is gated. On the dataset page
-click "Request Access" and fill out the researcher form. Approval is
-automatic for most applicants; your HF token gains read access as soon as
-the request is approved.
+The dataset repo `TrustAIRLab/HarmSkillBench` is gated. Click "Request
+Access" on the dataset page and fill out the form. Once the request
+is approved, your HF token can download the dataset.
 
 ## 4. Download the data
 

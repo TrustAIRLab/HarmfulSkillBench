@@ -31,7 +31,7 @@ cp .env.template .env
 # 3. Download the dataset from HuggingFace
 python scripts/download_from_hf.py
 
-# 4. Run a tiny smoke test
+# 4. Run one skill through the pipeline
 python eval/run_eval.py  --models gpt-4o --conditions A --limit 1
 python eval/judge.py     --models gpt-4o --conditions A --limit 1
 
@@ -74,10 +74,10 @@ See [DATA.md](DATA.md) for the detailed field schema.
 
 ## Main Results
 
-All numbers below are computed over the 5,280 judgments shipped in
+All numbers below are computed from the 5,280 judgments in
 [`data/eval_results/judgments_aggregated.csv`](data/eval_results/judgments_aggregated.csv),
-which is committed directly to this repository so the table can be
-audited and recomputed without downloading the full dataset.
+which is committed to this repo so the table can be recomputed
+without downloading the full dataset.
 
 Across the six evaluated models, the average harm score drops
 monotonically from **0.76** (Condition A, passive exposure) to
@@ -146,9 +146,10 @@ evaluation pipeline above against the same (model, condition, skill)
 cell reproduces those judgments (temperature = 0 for both target
 models and the judge).
 
-A smoke-level reproduction check (gpt-4o / Condition A / first skill)
-exactly matches the CSV on `label`, `refusal`, `hitl`, `aid`,
-`harmfulness`, and `score`.
+Running the pipeline on one skill (gpt-4o / Condition A /
+`skillsrest_f0204a5c`) produces a judgment whose `label`, `refusal`,
+`hitl`, `aid`, `harmfulness`, and `score` fields match the
+corresponding CSV row exactly.
 
 ## Documentation
 
