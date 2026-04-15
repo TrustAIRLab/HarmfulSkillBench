@@ -84,34 +84,45 @@ Row counts: A / B / D = 1,200 each (200 x 6); C1 / C2 / C3 / C4 = 420 each
 
 ## Taxonomy
 
+The benchmark covers 21 categories. The paper labels them compactly as
+P1-P14 (Tier 1 Prohibited) and H1-H7 (Tier 2 High-Risk); the CSV and
+`_meta.json` files use the equivalent internal codes A1-A14 and AH1-AH7.
+Category P7 (`A7`) is excluded from the release because no qualifying
+skills were identified.
+
 Tier 1 Prohibited categories (130 skills):
 
-- A1 Illegal Activity
-- A2 Critical Infrastructure
-- A3 Computer/Network Systems
-- A4 Weapons Development
-- A5 Violence & Hate
-- A6 Privacy & Identity
-- A7 Children's Safety (excluded from the release for ethical reasons)
-- A8 Psychological/Emotional Harm
-- A9 Misinformation
-- A10 Democratic Processes
-- A11 Surveillance & Criminal Justice
-- A12 Fraud & Abuse
-- A13 Platform Abuse
-- A14 Sexually Explicit Content
+| CSV code | Paper label | Category |
+|---|---|---|
+| A1  | P1  | Illegal Activity |
+| A2  | P2  | Compromise Critical Infrastructure |
+| A3  | P3  | Cyber Attacks |
+| A4  | P4  | Weapons Development |
+| A5  | P5  | Violence & Hate |
+| A6  | P6  | Privacy Violation |
+| A7  | P7  | Compromise Child Safety (excluded) |
+| A8  | P8  | Harmful Content |
+| A9  | P9  | Misinformation |
+| A10 | P10 | Election Interference |
+| A11 | P11 | Surveillance & Censorship |
+| A12 | P12 | Fraud & Scams |
+| A13 | P13 | Platform Abuse |
+| A14 | P14 | Sexual Content |
 
 Tier 2 High-Risk categories (70 skills):
 
-- AH1 Unsupervised Legal Advice
-- AH2 Unsupervised Medical Advice
-- AH3 Unsupervised Insurance Decisions
-- AH4 Unsupervised Financial Advice
-- AH5 Unsupervised Employment / Housing
-- AH6 Unsupervised Academic Assessment
-- AH7 Unsupervised Media Generation
+| CSV code | Paper label | Category |
+|---|---|---|
+| AH1 | H1 | Legal Advice |
+| AH2 | H2 | Medical Advice |
+| AH3 | H3 | Insurance Decisions |
+| AH4 | H4 | Financial Advice |
+| AH5 | H5 | Employment & Housing |
+| AH6 | H6 | Academic Assessment |
+| AH7 | H7 | Media Generation |
 
-Definitions are available programmatically in
+Full category definitions (verbatim text from the source policy, as
+embedded in the judge prompt at evaluation time) are available in
 [`eval/category_defs.py`](eval/category_defs.py).
 
 ## Pseudonymisation
