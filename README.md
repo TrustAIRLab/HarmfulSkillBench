@@ -55,6 +55,12 @@ python eval/plot_benchmark.py
 | Evaluation conditions | 7 (A, B, C1-C4, D) |
 | Aggregated judgments | 5,280 rows |
 
+> **Note**: The `synthetic` platform in the dataset corresponds to the
+> **original** skills described in the paper — 62 natural-language skill
+> descriptions authored by the benchmark team (no executable code) to
+> ensure full per-category coverage where ClawHub and Skills.Rest have
+> sparse entries.
+
 See [DATA.md](DATA.md) for the detailed field schema.
 
 ## Evaluation Conditions
@@ -158,10 +164,10 @@ MIT. See [LICENSE](LICENSE).
 ## Citation
 
 ```bibtex
-@misc{harmskillbench2026,
-  title  = {HarmSkillBench: A Benchmark for Harmful Agent Skill Refusal},
-  author = {TrustAIRLab},
-  year   = {2026},
-  url    = {https://huggingface.co/datasets/TrustAIRLab/HarmSkillBench},
+@misc{JZBSZ26,
+  title = {{HarmSkillBench: How Do Skills Weaponize Your Agents?}},
+  author = {Yukun Jiang and Yage Zhang and Michael Backes and Xinyue Shen and Yang Zhang},
+  year = {2026},
+  howpublished = {\url{https://huggingface.co/datasets/TrustAIRLab/HarmSkillBench}},
 }
 ```

@@ -26,6 +26,11 @@ data/
     judgments_aggregated.csv              5,280 rows (6 models x 7 conditions mix)
 ```
 
+> **Note**: The `synthetic` platform corresponds to the **original** skills
+> described in the paper — 62 natural-language skill descriptions authored
+> by the benchmark team (no executable code) to ensure full per-category
+> coverage where ClawHub and Skills.Rest have sparse entries.
+
 ## `_meta.json` Schema
 
 ```json
