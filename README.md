@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="HarmSkillBench_Logo.png" alt="HarmSkillBench" width="600">
+</p>
+
 # HarmSkillBench
 
 Benchmark code for evaluating LLM refusal behavior when agents are exposed
