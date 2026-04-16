@@ -2,6 +2,11 @@
   <img src="HarmfulSkillBench_Comics.png" alt="HarmfulSkillBench" width="600">
 </p>
 
+<p align="center">
+  <a href="data/HarmfulSkillBench.pdf">📝 Paper</a> &nbsp;|&nbsp;
+  <a href="https://huggingface.co/datasets/TrustAIRLab/HarmfulSkillBench">📦 Dataset</a>
+</p>
+
 # HarmfulSkillBench
 
 Benchmark code for evaluating LLM refusal behavior when agents are exposed

@@ -3,13 +3,13 @@
 .env.local
 
 # data/ is populated by `python scripts/download_from_hf.py`.
-# Only the aggregated judgments CSV is committed to the repo (it contains
-# no sensitive information and lets reviewers inspect the main results
-# without downloading the full dataset).
+# The aggregated judgments CSV and the paper PDF are committed directly;
+# everything else (skills, tasks) comes from HuggingFace.
 /data/*
 !/data/eval_results
 /data/eval_results/*
 !/data/eval_results/judgments_aggregated.csv
+!/data/HarmfulSkillBench.pdf
 
 # Python
 __pycache__/
