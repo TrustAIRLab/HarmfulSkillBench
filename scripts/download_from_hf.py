@@ -17,7 +17,7 @@ After download, the expected layout is:
     data/
       README.md
       LICENSE
-      skills/{clawhub,skillsrest,synthetic}/...
+      skills/{clawhub,skillsrest,original}/...
       eval_tasks/reviewed_tasks.jsonl
       eval_results/judgments_aggregated.csv
 """

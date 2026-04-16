@@ -117,16 +117,12 @@ MODEL_DISPLAY = {
     "kimi-k2.5": "Kimi K2.5",
 }
 
-TIER1_CATS = [f"A{i}" for i in range(1, 15) if i != 7]  # A7 excluded (no data)
-TIER2_CATS = [f"AH{i}" for i in range(1, 8)]
+TIER1_CATS = [f"P{i}" for i in range(1, 15) if i != 7]  # P7 excluded (no data)
+TIER2_CATS = [f"H{i}" for i in range(1, 8)]
 ALL_CATS = TIER1_CATS + TIER2_CATS
 
-# Display labels: P1-P14 for Tier 1, H1-H7 for Tier 2.
-CAT_DISPLAY: dict[str, str] = {}
-for c in TIER1_CATS:
-    CAT_DISPLAY[c] = "P" + c[1:]
-for c in TIER2_CATS:
-    CAT_DISPLAY[c] = "H" + c[2:]
+# Display labels match the category code (no translation needed).
+CAT_DISPLAY: dict[str, str] = {c: c for c in ALL_CATS}
 
 
 # =========================

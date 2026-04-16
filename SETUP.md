@@ -65,7 +65,7 @@ data/
   skills/
     clawhub/{anon_id}/{SKILL.md, _meta.json}
     skillsrest/{anon_id}/{SKILL.md, _meta.json}
-    synthetic/{category}/{name}/{SKILL.md, _meta.json}
+    original/{category}/{name}/{SKILL.md, _meta.json}
   eval_tasks/
     reviewed_tasks.jsonl
   eval_results/
