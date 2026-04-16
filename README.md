@@ -3,7 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="data/HarmfulSkillBench.pdf">📝 Paper</a> &nbsp;|&nbsp;
+  <a href="https://trustairlab.github.io/HarmfulSkillBench/data/HarmfulSkillBench.pdf">📝 Paper</a> &nbsp;|&nbsp;
+  <a href="https://github.com/TrustAIRLab/HarmfulSkillBench">💻 Code</a> &nbsp;|&nbsp;
   <a href="https://huggingface.co/datasets/TrustAIRLab/HarmfulSkillBench">📦 Dataset</a>
 </p>
 
