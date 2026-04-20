@@ -4,6 +4,7 @@
 
 <p align="center">
   <a href="https://trustairlab.github.io/HarmfulSkillBench/data/HarmfulSkillBench.pdf">📝 Paper</a> &nbsp;|&nbsp;
+  <a href="https://arxiv.org/abs/2604.15415">📑 arXiv</a> &nbsp;|&nbsp;
   <a href="https://github.com/TrustAIRLab/HarmfulSkillBench">💻 Code</a> &nbsp;|&nbsp;
   <a href="https://huggingface.co/datasets/TrustAIRLab/HarmfulSkillBench">📦 Dataset</a>
 </p>
@@ -209,9 +210,10 @@ If you find this useful in your research, please consider citing:
 
 ```bibtex
 @article{JZBSZ26,
-  title = {{HarmfulSkillBench: How Do Harmful Skills Weaponize Your Agents?}},
   author = {Yukun Jiang and Yage Zhang and Michael Backes and Xinyue Shen and Yang Zhang},
+  title = {{HarmfulSkillBench: How Do Harmful Skills Weaponize Your Agents?}},
   year = {2026},
-  howpublished = {\url{https://github.com/TrustAIRLab/HarmfulSkillBench}},
+  journal = {{CoRR abs/2604.15415}},
+  url = {https://arxiv.org/abs/2604.15415}
 }
 ```
