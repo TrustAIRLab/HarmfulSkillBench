@@ -144,14 +144,14 @@ def find_skill_md(
       - real skills (clawhub / skillsrest):
           data/skills/{platform}/{anon_id}/SKILL.md
       - original (benchmark-team-authored) skills:
-          data/skills/original/{category}/{name}/SKILL.md
+          data/skills/original/{category}/{anon_id}/SKILL.md
 
     Returns the file contents as a string, or None if the file is missing.
     """
     if platform == "original":
-        if not category or not name:
+        if not category or not anon_id:
             return None
-        path = SKILLS_DIR / "original" / category / name / "SKILL.md"
+        path = SKILLS_DIR / "original" / category / anon_id / "SKILL.md"
     else:
         path = SKILLS_DIR / platform / anon_id / "SKILL.md"
 
