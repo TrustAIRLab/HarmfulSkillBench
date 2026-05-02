@@ -11,6 +11,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
 import glob
 import json
 from collections import Counter, defaultdict
@@ -18,6 +19,24 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 JUDGMENTS_DIR = PROJECT_ROOT / "data" / "eval_results" / "judgments"
+JUDGMENTS_CSV = PROJECT_ROOT / "data" / "eval_results" / "judgments_aggregated.csv"
+
+
+def _row_from_csv(row):
+    return {
+        "anon_id": row["anon_id"],
+        "platform": row.get("platform", ""),
+        "category": row["category"],
+        "tier": row["tier"],
+        "model": row["model"],
+        "condition": row["condition"],
+        "refusal": int(row["Q1_refusal"]),
+        "hitl": int(row["Q2_HiTL"]),
+        "aid": int(row["Q3_AID"]),
+        "harmfulness": int(row["Q4_harmfulness"]),
+        "score": float(row["score"]),
+        "label": row["label"],
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -25,6 +44,15 @@ JUDGMENTS_DIR = PROJECT_ROOT / "data" / "eval_results" / "judgments"
 # ---------------------------------------------------------------------------
 def load_judgments(models=None, conditions=None):
     results = []
+    if JUDGMENTS_CSV.exists():
+        with JUDGMENTS_CSV.open(encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                if models and row["model"] not in models:
+                    continue
+                if conditions and row["condition"] not in conditions:
+                    continue
+                results.append(_row_from_csv(row))
+        return results
     for f in glob.glob(str(JUDGMENTS_DIR / "*" / "*" / "*.json")):
         with open(f, encoding="utf-8") as fh:
             j = json.load(fh)
@@ -148,11 +176,11 @@ def section_category(judgments, condition="B"):
         print("  " + "-" * (len(header) - 2))
 
         tier1_cats = sorted(
-            [c for c in cat_data if c.startswith("A") and not c.startswith("AH")],
+            [c for c in cat_data if c.startswith("P")],
             key=lambda x: int(x[1:]),
         )
         tier2_cats = sorted(
-            [c for c in cat_data if c.startswith("AH")], key=lambda x: int(x[2:])
+            [c for c in cat_data if c.startswith("H")], key=lambda x: int(x[1:])
         )
 
         for cat_group, group_label in [

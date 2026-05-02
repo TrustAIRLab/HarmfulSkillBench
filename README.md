@@ -24,7 +24,7 @@ safeguards.
   [TrustAIRLab/HarmfulSkillBench on HuggingFace](https://huggingface.co/datasets/TrustAIRLab/HarmfulSkillBench)
   (gated)
 - **Code (this repo)**: download script + evaluation runner + judge +
-  analysis + figure plotting
+  analysis
 
 ## 🚀 Quick Start
 
@@ -50,7 +50,6 @@ python eval/judge.py     --models gpt-4o --conditions A --limit 1
 python eval/run_eval.py
 python eval/judge.py
 python eval/analyze.py
-python eval/plot_benchmark.py
 ```
 
 ## 📊 Dataset Summary
@@ -177,9 +176,6 @@ Tier 2 (High-Risk).
 | DeepSeek V3.2   | 48.00      | 0.40     | 73.85      | 0.25     | 0.00     | 24.29     | 1.43     | 0.68     |
 | *Average*       | *59.58*    | *0.27*   | *91.28*    | *0.08*   | *0.71*   | *29.76*   | *0.95*   | *0.61*   |
 
-Per-category heatmaps for Conditions A, B, and D can be regenerated
-locally with `python eval/plot_benchmark.py`.
-
 ## 🔁 Reproducing the Published Results
 
 The dataset ships with `data/eval_results/judgments_aggregated.csv`
@@ -197,7 +193,7 @@ corresponding CSV row exactly.
 
 - [SETUP.md](SETUP.md): environment, dependencies, API keys
 - [EVALUATE.md](EVALUATE.md): full evaluation workflow (download, run,
-  judge, analyze, plot)
+  judge, analyze)
 - [DATA.md](DATA.md): dataset layout and field schema
 
 ## 📄 License

@@ -36,8 +36,10 @@ Condition-specific behavior:
 
 - `A`: passive skill reading (no user task).
 - `B`: explicit harmful task + plan reminder.
-- `C1` through `C4`: 2x2 safeguard ablation on Tier 2 only. `run_eval`
-  silently skips Tier 1 skills under C-conditions.
+- `C1` through `C4`: 2x2 safeguard ablation designed for Tier 2 skills
+  only. `run_eval` does not auto-filter; pass `--tier tier2` together
+  with `--conditions C1 C2 C3 C4` to avoid spending API calls on Tier 1
+  skills (e.g. `python eval/run_eval.py --tier tier2 --conditions C1 C2 C3 C4`).
 - `D`: no-skill baseline. Uses the same task + plan reminder as B but
   does not load any SKILL.md content.
 
@@ -73,27 +75,14 @@ python eval/analyze.py
 Prints metrics tables: overall x condition, tier x condition, per-category
 breakdowns, score distributions, and A vs B transition matrix.
 
-## 4. Plot
-
-```bash
-python eval/plot_benchmark.py
-```
-
-Produces three PNG and three PDF heatmaps under `Figure/png/` and
-`Figure/pdf/`:
-
-- `heatmap_score_condA.{png,pdf}` (passive skill reading)
-- `heatmap_score_condB.{png,pdf}` (skill + harmful task)
-- `heatmap_score_condD.{png,pdf}` (no-skill baseline)
-
-## 5. Checkpointing and re-runs
+## 4. Checkpointing and re-runs
 
 Both `run_eval.py` and `judge.py` skip (model, condition, anon_id) tuples
 for which a prior successful output already exists. Errored outputs are
 retried on re-runs. To force a full re-run, delete the corresponding
 output files.
 
-## 6. Cost estimate
+## 5. Cost estimate
 
 Running the default 6-model x 7-condition x 200-skill matrix produces 5,280
 model calls + 5,280 judge calls. A full run through the OpenAI-, Google-,
